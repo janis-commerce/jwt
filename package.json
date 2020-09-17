@@ -31,5 +31,9 @@
   ],
   "directories": {
     "test": "tests"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.9.0"
   }
 }
