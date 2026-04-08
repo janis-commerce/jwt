@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.1] - 2026-04-08
+### Fixed
+- Downgrade `jwks-rsa` to v3.2.2 to support `require()` of ES Modules.
+
 ## [2.0.0] - 2026-04-08
 ### BREAKING CHANGES
 - `jwks-rsa` v4 enforces the Node.js version range declared in that package (e.g. `^20.19.0`, `^22.12.0`, or `>=23.0.0`). Consumers on older Node versions must upgrade their runtime or stay on an older release of this package.
