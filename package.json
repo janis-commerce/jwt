@@ -1,6 +1,6 @@
 {
   "name": "@janiscommerce/jwt",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A helper to verify Janis JWTs",
   "main": "lib/index.js",
   "scripts": {
