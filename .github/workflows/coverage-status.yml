@@ -1,20 +1,30 @@
 name: Coverage Status
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
 
 jobs:
-  build:
+  coverage:
+
+    name: Coverage
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
         with:
-          node-version: 12.x
-      - run: npm i
-      - run: npm run test-ci
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
+          node-version: 22
+      - name: Install dependencies
+        run: npm install
+      - name: Run coverage
+        run: npm run coverage-ci
+      - name: Upload to Coveralls
+        uses: coverallsapp/github-action@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{secrets.GITHUB_TOKEN}}

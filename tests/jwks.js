@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const { JwksClient } = require('jwks-rsa/lib/JwksClient');
+const { JwksClient } = require('jwks-rsa');
 
 const JWKS = require('../lib/jwks');
 

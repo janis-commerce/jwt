@@ -11,6 +11,9 @@ A helper to verify Janis JWTs
 npm install @janiscommerce/jwt
 ```
 
+## BREAKING CHANGES _Since 2.0.0_ ⚠️
+`jwks-rsa` v4 enforces the Node.js version range declared in that package (e.g. `^20.19.0`, `^22.12.0`, or `>=23.0.0`). Consumers on older Node versions must upgrade their runtime or stay on an older release of this package.
+
 ## API
 
 ### JWT
